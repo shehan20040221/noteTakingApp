@@ -1,10 +1,7 @@
-import mangoose from 'mongoose';
+import mongoose from 'mongoose';
 
 //create a schema
-
-//model based off of that scheme
-const Note = mangoose.model('Note', noteSchema);
-const noteSchema = new mangoose.Schema({
+const noteSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -18,7 +15,7 @@ const noteSchema = new mangoose.Schema({
     timestamps: true
 });
 
-
+//model based off of that scheme
 const Note = mongoose.model('Note', noteSchema);
 
 export default Note;
